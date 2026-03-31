@@ -14,10 +14,8 @@ use App\Http\Middleware\LogAcessoMiddleware;
 */
 
 Route::get('/', [App\Http\Controllers\Principal::class, 'principal']);
-Route::get('/contato', [App\Http\Controllers\Contato::class, 'contato']);
-Route::get('/usuario', [App\Http\Controllers\Usuario::class, 'usuario']);
-Route::get('/usuario/faltas', [App\Http\Controllers\Usuario::class, 'faltas']);
-Route::get('/usuario/buscar', [App\Http\Controllers\Usuario::class, 'buscar']);
+Route::get('/aluno/show', [App\Http\Controllers\Aluno::class, 'show'])->name('aluno.show');
+Route::get('/professor/show', [App\Http\Controllers\Professor::class, 'mostrar'])->name('professor.mostrar');
 
 
 
