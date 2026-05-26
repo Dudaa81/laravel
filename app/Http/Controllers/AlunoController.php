@@ -6,24 +6,12 @@ use Illuminate\Http\Request;
 
 class AlunoController extends Controller
 {
-    function index(){
+    function index(){ 
         return view('aluno.index');
     }
 
-    function create(Request $dados){
-        dd($dados->all());
-        $aluno = \App\Models\AlunoModel();
-    }
-
-    function list(){
-
-    }
-
-    function update(Request $dados){
-
-    }
-
-    function delete(Request $dados){
-
+    function add(Request $dados) { 
+        $aluno = new \App\Models\AlunoModel();
+        $aluno::create($dados->all());
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class AlunoModel extends Model
 {
     use HasFactory;
-    private $table = 'aluno';
-    private $fillable = ['nome', 'email'];
+    protected $table = 'aluno';
+    protected $fillable = ['nome'];
 
 }

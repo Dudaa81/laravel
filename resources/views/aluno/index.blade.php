@@ -8,35 +8,13 @@
   </head>
   <body>
 
-<div class="container-fluid">
-    <div class="row d-flex justify-content-center">
-        <div class="col-3">
-            <div class="card shadow">
-                <div class="card-body">
-    
-                    <form action="{{ route('aluno.create') }}" method="post">
-                        @csrf
-                        <div class="mb-3">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" name="nome" id="nome" class="form-control">
-                        </div>
+<    <form action="{{ route('aluno.add') }}" method="post">
+        @csrf
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">E-mail</label>
-                            <input type="text" name="email" id="email" class="form-control">
-                        </div>
+        <button type="submit">Salvar</button>
+    </form>
 
-                        <button type="submit" class="btn btn-primary">Salvar</button>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>

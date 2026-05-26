@@ -14,13 +14,10 @@ use App\Http\Middleware\LogAcessoMiddleware;
 */
 
 Route::get('/', [App\Http\Controllers\Principal::class, 'principal']);
-Route::prefix('aluno')->group(function(){
+Route::prefix('/aluno')->group(function(){
     Route::get('/index', [App\Http\Controllers\AlunoController::class, 'index'])->name('aluno.index');
-    Route::post('/create', [App\Http\Controllers\AlunoController::class, 'create'])->name('aluno.create');
-    Route::get('/list', [App\Http\Controllers\AlunoController::class, 'list'])->name('aluno.list');
-    Route::post('/update', [App\Http\Controllers\AlunoController::class, 'update'])->name('aluno.update');
-    Route::post('/delete', [App\Http\Controllers\AlunoController::class, 'delete'])->name('aluno.delete');
-});
+    Route::post('/add', [App\Http\Controllers\AlunoController::class, 'add'])->name('aluno.add');
+}); 
 
 
 
