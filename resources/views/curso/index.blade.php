@@ -8,10 +8,13 @@
   </head>
   <body>
 
-<    <form action="{{ route('aluno.add') }}" method="post">
+<    <form action="{{ route('curso.add') }}" method="post">
         @csrf
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome">
+
+        <label for="periodo">Periodo</label>
+        <input type="text" name="periodo" id="periodo">
 
         <button type="submit">Salvar</button>
         @isset($success)
@@ -19,9 +22,10 @@
         @endisset
     </form>
 
-    @isset($alunos)
-            @foreach($alunos as $aluno)
-                <h3>{{ $aluno->nome }}</h3>
+    @isset($cursos)
+            @foreach($cursos as $curso)
+                <h3>{{ $curso->nome }}</h3>
+                <h3>{{ $curso->periodo }}</h3>
             @endforeach
     @endisset
 
