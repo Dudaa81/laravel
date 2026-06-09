@@ -20,4 +20,13 @@ class AdministradorController extends Controller
 
      return view('administrador.index', ['success'=>'Cadastrado!', 'administradores'=>$administradores::all()]);
     }
+
+
+    function remove(string $id) {
+        $administrador = new \App\Models\AdministradorModel();
+        $administrador::destroy($id);
+
+        return view('administrador.index', ['success'=>'Removido!', 'administradores'=>$administrador::all()]);
+
+    }
 }
