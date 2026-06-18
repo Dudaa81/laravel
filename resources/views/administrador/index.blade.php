@@ -31,7 +31,7 @@
 
     <table border="1">
         <tr>
-            <td>Nome do Aluno</td>
+            <td>Nome do Adminstrador</td>
             <td colspan="2">Ações</td>
         </tr>
 
@@ -53,8 +53,9 @@
                                 <button type="submit">Remover</button>
                             </form>                        </td>
                         <td>
-                            <button type="submit">Atualizar</button>
-                        </td>
+                        <form action="{{ route('administrador.atualizar', ['id' => $administrador->id]) }}" method="GET">
+                                <button type="submit">Atualizar</button>
+                            </form>                        </td>
                     </tr>
             @endforeach
     @endisset
