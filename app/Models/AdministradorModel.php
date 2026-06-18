@@ -9,5 +9,5 @@ class AdministradorModel extends Model
 {
     use HasFactory;
     protected $table = 'administrador';
-    protected $fillable = ['nome', "email", "telefone", "cpf". "usuario", "senha", "status"];
+    protected $fillable = ['nome', "email", "telefone", "cpf", "usuario", "senha", "status"];
 }

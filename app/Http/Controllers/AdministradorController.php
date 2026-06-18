@@ -30,7 +30,7 @@ class AdministradorController extends Controller
 
       if ($validator->fails()) {
           return redirect()
-              ->route('aluno.index')
+              ->route('administrador.index')
               ->withErrors($validator)
               ->withInput();
       }
